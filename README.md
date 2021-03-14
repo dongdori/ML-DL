@@ -11,12 +11,12 @@ Data contains 55620 rows * 6 features
 I tried to improve the model by ensembling 3 models. I had to make 9 models per each approach because it is 'quantile forecasting task'! 
   
   ### model 1. linear model
-    very simple model. Basic assumption of this model is that power generation of each timestep has linear relation with each feature value of each time steps.  
+  very simple model. Basic assumption of this model is that power generation of each timestep has linear relation with each feature value of each time steps.  
   ### model 2. LGBM model
-    Basic assumption of this model is that power generation of each timestep has complicated(not linear) relation with each feature value of each time steps.
-    Used lgbm instead of Linear weights.
+  Basic assumption of this model is that power generation of each timestep has complicated(not linear) relation with each feature value of each time steps.
+  Used lgbm instead of Linear weights.
   ### model 3. CNN+GRU model
-    It is Encoder-Decoder based model. Using Conv1D kernel, input multivariate sequence is encoded into a vector and it is decoded by GRU,
-    therefore output sequence length of 96(solar power generation value of 2 days at intervals of 30 minutes)
+  It is Encoder-Decoder based model. Using Conv1D kernel, input multivariate sequence is encoded into a vector and it is decoded by GRU,
+  therefore output sequence length of 96(solar power generation value of 2 days at intervals of 30 minutes)
 
 You can check my notebook for detailed implementation! 
